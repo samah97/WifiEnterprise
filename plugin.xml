@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-wifienterprise" version="1.0.0">
+    <name>WifiEnterprise</name>
+    <js-module name="WifiEnterprise" src="www/WifiEnterprise.js">
+        <clobbers target="WifiEnterprise" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="WifiEnterprise">
+                <param name="android-package" value="cordova.plugin.wifienterprise.WifiEnterprise" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/WifiEnterprise.java" target-dir="src/cordova/plugin/wifienterprise/WifiEnterprise" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="WifiEnterprise">
+                <param name="ios-package" value="WifiEnterprise" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/WifiEnterprise.m" />
+    </platform>
+</plugin>

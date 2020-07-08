@@ -1,0 +1,11 @@
+{
+  "name": "wifienterprise",
+  "version": "1.0.0",
+  "description": "This plugin is to connect to wifi using wpa enterprise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samah Daou",
+  "license": "ISC"
+}
