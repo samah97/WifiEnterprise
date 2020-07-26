@@ -14,17 +14,17 @@ public class WifiEnterprise extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if("connect".equals(action){
+        if("connect".equals(action)){
             this.connect(args, callbackContext);
             return true;
          }
         return false;
     }
 
-    private void connect(JSONArray jsonArray, CallbackContext callbackContext){
+    private void connect(JSONArray args, CallbackContext callbackContext){
         if(args != null){
             try{
-                JSONObject jsonObject = jsonArray.getJSONObject(0);
+                JSONObject jsonObject = args.getJSONObject(0);
                 String ssid = jsonObject.getString("ssid");
                 String password = jsonObject.getString("password");
                 if(ssid == null || "".equals(ssid)){
